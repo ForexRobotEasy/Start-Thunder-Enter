@@ -1,0 +1,84 @@
+mql5
+//+------------------------------------------------------------------+
+//|                                                   Start Thunder Enter |
+//|                                         https://forexroboteasy.com |
+//|                                              Forex Robot Easy Team |
+//+------------------------------------------------------------------+
+
+// Function to display blue arrows for buy trades
+void DisplayBlueArrows()
+{
+    // Code to display blue arrows
+}
+
+// Function to display pink arrows for sell trades
+void DisplayPinkArrows()
+{
+    // Code to display pink arrows
+}
+
+// Function to wait until the candle fully forms after arrow appears
+void WaitUntilCandleFormed()
+{
+    // Code to wait for the candle to fully form
+}
+
+// Function to enter a buy trade as soon as the next candle appears
+void EnterBuyTrade()
+{
+    // Code to enter a buy trade
+}
+
+// Function to enter a sell trade as soon as the next candle appears
+void EnterSellTrade()
+{
+    // Code to enter a sell trade
+}
+
+// Function to wait until TP1 is hit before closing the trade at a profit
+void WaitUntilTP1()
+{
+    // Code to wait until TP1 is hit
+}
+
+// Main function
+void OnTick()
+{
+    // Check if it's time to display blue arrows for buy trades
+    if (IsTimeToDisplayBlueArrows())
+    {
+        DisplayBlueArrows();
+    }
+    
+    // Check if it's time to display pink arrows for sell trades
+    if (IsTimeToDisplayPinkArrows())
+    {
+        DisplayPinkArrows();
+    }
+    
+    // Check if a blue arrow appeared
+    if (IsBlueArrowAppeared())
+    {
+        // Wait until the candle fully forms
+        WaitUntilCandleFormed();
+        
+        // Enter a buy trade as soon as the next candle appears
+        EnterBuyTrade();
+        
+        // Wait until TP1 is hit
+        WaitUntilTP1();
+    }
+    
+    // Check if a pink arrow appeared
+    if (IsPinkArrowAppeared())
+    {
+        // Wait until the candle fully forms
+        WaitUntilCandleFormed();
+        
+        // Enter a sell trade as soon as the next candle appears
+        EnterSellTrade();
+        
+        // Wait until TP1 is hit
+        WaitUntilTP1();
+    }
+}
